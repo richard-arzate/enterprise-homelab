@@ -24,6 +24,20 @@ The project simulates a segmented enterprise environment using:
 
 ---
 
+## Environment Preview
+
+### Active Directory Environment
+
+![Active Directory](active-directory/DC01%20Users%3AEmployees%20Screenshot.png)
+
+### Vulnerability Scanning
+
+![Nessus Scan](vulnerability-scanning/Nessus%20My%20Basic%20Network%20Scan%20Screenshot.png)
+
+### Kali Linux Enumeration
+
+![Kali Enumeration](vulnerability-scanning/Kali%20Linux%20nmap%20Scan%20Screenshot.png)
+
 # Infrastructure Overview
 
 ## Hypervisor
