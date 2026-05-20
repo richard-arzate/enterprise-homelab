@@ -4,17 +4,23 @@
 
 This repository documents the design, implementation, and security hardening of an enterprise-style homelab environment built for hands-on IT administration, networking, virtualization, and cybersecurity training.
 
+## Project Purpose
+
+This homelab was built to simulate a small enterprise IT and cybersecurity environment. The goal was to gain hands-on experience with systems administration, network segmentation, firewall configuration, Active Directory, virtualization, vulnerability scanning, and security validation.
+
+This project supports entry-level IT, help desk, systems administration, network support, SOC analyst, and cybersecurity analyst career preparation.
+
 The project simulates a segmented enterprise environment using:
 
 - Active Directory
 - VLAN segmentation
 - Zone-based firewalling
 - Windows Server administration
-- Linux administration
-- Vulnerability scanning
+- Linux systems administration
+- Vulnerability assessment
 - Virtualization
 - DNS management
-- Network enumeration
+- Network discovery and enumeration
 
 ---
 
