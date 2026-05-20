@@ -46,6 +46,19 @@ The project simulates a segmented enterprise environment using:
 - Windows Defender Firewall
 - UniFi Zone-Based Firewall Policies
 
+## Repository Sections
+
+| Section | Description |
+|---|---|
+| active-directory | Active Directory deployment, users, groups, DNS, and Group Policy |
+| firewall-rules | UniFi firewall policies and inter-VLAN access control |
+| network-segmentation | VLAN architecture and segmented network design |
+| virtualization | Proxmox virtualization infrastructure and virtual machines |
+| vulnerability-scanning | Nessus and Nmap enumeration and vulnerability assessment |
+| diagrams | Network diagrams and infrastructure visuals |
+
+Each section contains documentation, screenshots, and configuration examples related to that specific area of the homelab environment.
+
 ---
 
 # VLAN Architecture
