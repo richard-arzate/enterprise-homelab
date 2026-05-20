@@ -1,168 +1,165 @@
-# Enterprise IT & Cybersecurity Homelab
+# Enterprise Homelab Project
 
 ## Overview
-This project documents the design, implementation, and management of an enterprise-style homelab environment built for hands-on IT administration, networking, virtualization, and cybersecurity training.
 
-The lab was designed to strengthen practical skills in:
-- Systems administration
-- Active Directory management
-- Network segmentation
-- Virtualization
-- Firewall configuration
+This repository documents the design, implementation, and security hardening of an enterprise-style homelab environment built for hands-on IT administration, networking, virtualization, and cybersecurity training.
+
+The project simulates a segmented enterprise environment using:
+
+- Active Directory
+- VLAN segmentation
+- Zone-based firewalling
+- Windows Server administration
+- Linux administration
 - Vulnerability scanning
-- Network troubleshooting
-- Security analysis
+- Virtualization
+- DNS management
+- Network enumeration
 
 ---
 
-## Technologies Used
+# Infrastructure Overview
 
-### Networking & Infrastructure
-- UniFi Ecosystem
-- UniFi Dream Machine Pro Max
-- UniFi Switching
-- UniFi Wireless Access Point
-- VLAN Segmentation
-- Firewall Policies
-- TCP/IP
-- DNS
-- DHCP
-
-### Virtualization
+## Hypervisor
 - Proxmox VE
 
-### Operating Systems
-- Windows Server
-- Windows 11 Pro
-- Kali Linux
-
-### Security & Monitoring
-- Nessus
-- Wireshark
-- Nmap
-- Vulnerability Scanning
-- Penetration Testing
-- Traffic Analysis
-
-### Directory Services
-- Active Directory
-- User and Group Management
-- Access Control
-
----
-
-## Environment Overview
-
-This homelab was built to simulate a small enterprise IT and cybersecurity environment for hands-on learning and security testing.
-
-The environment includes:
-- UniFi networking infrastructure with VLAN segmentation and firewall policies
-- Wireless and wired network isolation for Trusted, Guest, IoT, Work, Lab, and Management networks
-- Proxmox virtualization hosting multiple Windows and Linux virtual machines
-- A Windows Server Active Directory environment for user and group administration
-- Windows 11 virtual machines simulating endpoint systems and administrative workstations
-- A Kali Linux virtual machine used for penetration testing and network analysis within the isolated lab environment
-- Vulnerability scanning and monitoring using Nessus and Wireshark
-
----
-
-## Network Architecture
-
-### VLAN Segmentation
-The network environment is segmented into multiple VLANs to improve security, isolation, and management.
-
-Configured networks include:
-- Management Network
-- Trusted Network
-- Work Network
-- Guest Network
-- IoT Network
-- Lab Network
-- Gaming Network
-- Printer Network
-
-### Firewall Configuration
-Firewall rules were implemented to:
-- Restrict unnecessary inter-VLAN communication
-- Isolate insecure or untrusted devices
-- Control access between lab and production-style networks
-- Improve overall network security posture
-- Monitor and validate network traffic behavior
-
----
-
 ## Virtual Machines
+- Windows Server 2022 (DC01)
+- Windows 11 Pro Client VM
+- Kali Linux VM
+- Windows 11 Main Workstation VM
 
-### Windows Server
-Used to simulate enterprise infrastructure services including:
-- Active Directory
-- User and Group Management
-- Administrative management and configuration
-- Access Control testing
+## Networking Stack
+- UniFi Dream Machine Pro Max
+- UniFi Switch Pro Max 24 PoE
+- UniFi U7 Pro Max
 
-### Windows 11 Pro (Lab Endpoint System)
-Used within the Lab network to simulate enterprise user workstations for:
-- User and administrator account testing
-- Active Directory connectivity and administration
-- Network connectivity validation
-- Access control and permissions testing
-- Enterprise-style workstation and user environment simulation
-
-### Windows 11 Pro (Main Workstation)
-Used as a primary workstation on the Trusted network for:
-- Studying IT and cybersecurity concepts
-- Accessing the UniFi management interface
-- Managing VLANs and firewall configurations
-- Watching training and troubleshooting content
-- Running Nessus vulnerability scans
-- General day-to-day workstation usage
-
-### Kali Linux
-Used within the isolated lab environment for:
-- Network analysis
-- Vulnerability assessment
-- Penetration testing
-- Security validation
-- Firewall and segmentation testing
+## Security Tools
+- Nessus Essentials
+- Nmap
+- Windows Defender Firewall
+- UniFi Zone-Based Firewall Policies
 
 ---
 
-## Security Configuration
-Security-focused configurations implemented within the environment include:
-- Inter-VLAN firewall rules
-- Network isolation policies
-- Vulnerability scanning workflows
-- Segmentation testing
-- Traffic monitoring and analysis
-- Administrative access control
+# VLAN Architecture
+
+| VLAN | Purpose | Subnet |
+|---|---|---|
+| 10 | Management | 10.10.10.0/29 |
+| 20 | Trusted | 10.10.20.0/25 |
+| 30 | Work | 10.10.30.0/29 |
+| 40 | IoT | 10.10.40.0/26 |
+| 50 | Gaming | 10.10.50.0/29 |
+| 60 | Lab | 10.10.60.0/24 |
+| 70 | Guest | 10.10.70.0/25 |
+| 80 | Printer | 10.10.80.0/29 |
 
 ---
 
-## Skills Demonstrated
-- Systems Administration
+# Key Features
+
+## Active Directory
+- Organizational Units (OUs)
+- Security Groups
+- User Management
+- Administrative Delegation
+- Group Policy Management
+
+## Network Segmentation
+- Zone-based firewall architecture
+- Inter-VLAN isolation
+- Trusted-to-management access controls
+- Guest and IoT isolation
+
+## Vulnerability Management
+- Nessus vulnerability scanning
+- Host discovery scans
+- Internal network enumeration
+- Nmap service discovery
+
+## Virtualization
+- Multi-VM enterprise lab environment
+- VLAN-aware virtual networking
+- Isolated lab infrastructure
+
+---
+
+# Screenshots
+
+## UniFi Network Overview
+![UniFi Overview](screenshots/UniFi%20WiFi,%20Networks,%20and%20Internet%20GUI.png)
+
+---
+
+## UniFi Topology View
+![UniFi Topology](screenshots/UniFi%20Topology%20View%20Screenshot.png)
+
+---
+
+## UniFi Zone Matrix
+![Zone Matrix](screenshots/UniFi%20Zone%20Matrix%201%3A2%20Screenshot.png)
+
+---
+
+## Active Directory Users and Organizational Units
+![AD Users](screenshots/DC01%20Users%3AEmployees%20Screenshot.png)
+
+---
+
+## Active Directory Security Groups
+![AD Groups](screenshots/DC01%20Groups%20Screenshot.png)
+
+---
+
+## Group Policy Restrictions
+![GPO](screenshots/DC01%20Baseline%20User%20Restrictions%20Screenshot.png)
+
+---
+
+## DNS Manager
+![DNS](screenshots/AD%20DNS%20Screenshot.png)
+
+---
+
+## Firewall Policies
+![Firewall Rules](screenshots/Firewall%20Rules%201%3A2%20Screenshot.png)
+
+---
+
+## Kali Linux Enumeration
+![Nmap Scan](screenshots/Kali%20Linux%20nmap%20Scan%20Screenshot.png)
+
+---
+
+## Nessus Vulnerability Scanning
+![Nessus](screenshots/Nessus%20My%20Basic%20Network%20Scan%20Screenshot.png)
+
+---
+
+# Skills Demonstrated
+
 - Active Directory Administration
-- Network Troubleshooting
+- Windows Server Administration
+- Linux Administration
 - VLAN Configuration
-- Firewall Configuration
-- Virtualization Management
-- Vulnerability Assessment
-- Technical Documentation
-- Security Analysis
+- Firewall Policy Management
 - Network Segmentation
+- Vulnerability Assessment
+- DNS Administration
+- Virtualization
+- Enterprise Networking
+- Troubleshooting
+- Security Hardening
 
 ---
 
-## Future Improvements
-Planned future improvements include:
-- Expanding the Active Directory environment
-- Adding centralized logging and monitoring
-- Implementing SIEM and security monitoring tools
-- Expanding vulnerability scanning and security testing workflows
-- Implementing backup and recovery solutions
-- Additional firewall hardening and network security improvements
-- Expanding virtualization and lab infrastructure
+# Future Improvements
 
----
-
-## Author
-Richard Roman Arzate
+- SIEM integration
+- Windows event forwarding
+- Sysmon deployment
+- ELK stack integration
+- IDS/IPS monitoring
+- Automated vulnerability reporting
+- Active Directory attack simulations
