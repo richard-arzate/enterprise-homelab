@@ -38,27 +38,31 @@ The project simulates a segmented enterprise environment using:
 
 ![Kali Enumeration](vulnerability-scanning/Kali%20Linux%20nmap%20Scan%20Screenshot.png)
 
-# Infrastructure Overview
+---
 
-## Hypervisor
+## Infrastructure Overview
+
+### Hypervisor
 - Proxmox VE
 
-## Virtual Machines
+### Virtual Machines
 - Windows Server 2022 (DC01)
 - Windows 11 Pro Client VM
 - Kali Linux VM
 - Windows 11 Main Workstation VM
 
-## Networking Stack
+### Networking Stack
 - UniFi Dream Machine Pro Max
 - UniFi Switch Pro Max 24 PoE
 - UniFi U7 Pro Max
 
-## Security Tools
+### Security Tools
 - Nessus Essentials
 - Nmap
 - Windows Defender Firewall
 - UniFi Zone-Based Firewall Policies
+
+---
 
 ## Repository Sections
 
@@ -75,7 +79,7 @@ Each section contains documentation, screenshots, and configuration examples rel
 
 ---
 
-# VLAN Architecture
+## VLAN Architecture
 
 | VLAN | Purpose | Subnet |
 |---|---|---|
@@ -90,87 +94,87 @@ Each section contains documentation, screenshots, and configuration examples rel
 
 ---
 
-# Key Features
+## Key Features
 
-## Active Directory
+### Active Directory
 - Organizational Units (OUs)
 - Security Groups
 - User Management
 - Administrative Delegation
 - Group Policy Management
 
-## Network Segmentation
+### Network Segmentation
 - Zone-based firewall architecture
 - Inter-VLAN isolation
 - Trusted-to-management access controls
 - Guest and IoT isolation
 
-## Vulnerability Management
+### Vulnerability Management
 - Nessus vulnerability scanning
 - Host discovery scans
 - Internal network enumeration
 - Nmap service discovery
 
-## Virtualization
+### Virtualization
 - Multi-VM enterprise lab environment
 - VLAN-aware virtual networking
 - Isolated lab infrastructure
 
 ---
 
-# Screenshots
+## Screenshots
 
-## UniFi Network Overview
+### UniFi Network Overview
 ![UniFi Overview](screenshots/UniFi%20WiFi,%20Networks,%20and%20Internet%20GUI.png)
 
 ---
 
-## UniFi Topology View
+### UniFi Topology View
 ![UniFi Topology](screenshots/UniFi%20Topology%20View%20Screenshot.png)
 
 ---
 
-## UniFi Zone Matrix
+### UniFi Zone Matrix
 ![Zone Matrix](screenshots/UniFi%20Zone%20Matrix%201%3A2%20Screenshot.png)
 
 ---
 
-## Active Directory Users and Organizational Units
+### Active Directory Users and Organizational Units
 ![AD Users](screenshots/DC01%20Users%3AEmployees%20Screenshot.png)
 
 ---
 
-## Active Directory Security Groups
+### Active Directory Security Groups
 ![AD Groups](screenshots/DC01%20Groups%20Screenshot.png)
 
 ---
 
-## Group Policy Restrictions
+### Group Policy Restrictions
 ![GPO](screenshots/DC01%20Baseline%20User%20Restrictions%20Screenshot.png)
 
 ---
 
-## DNS Manager
+### DNS Manager
 ![DNS](screenshots/AD%20DNS%20Screenshot.png)
 
 ---
 
-## Firewall Policies
+### Firewall Policies
 ![Firewall Rules](screenshots/Firewall%20Rules%201%3A2%20Screenshot.png)
 
 ---
 
-## Kali Linux Enumeration
+### Kali Linux Enumeration
 ![Nmap Scan](screenshots/Kali%20Linux%20nmap%20Scan%20Screenshot.png)
 
 ---
 
-## Nessus Vulnerability Scanning
+### Nessus Vulnerability Scanning
 ![Nessus](screenshots/Nessus%20My%20Basic%20Network%20Scan%20Screenshot.png)
 
 ---
 
-# Skills Demonstrated
+## Skills Demonstrated
 
 - Active Directory Administration
 - Windows Server Administration
@@ -187,7 +191,7 @@ Each section contains documentation, screenshots, and configuration examples rel
 
 ---
 
-# Future Improvements
+## Future Improvements
 
 - SIEM integration
 - Windows event forwarding
